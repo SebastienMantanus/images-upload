@@ -5,13 +5,13 @@ const uid2 = require("uid2");
 const sha256 = require("crypto-js/sha256");
 const Base64 = require("crypto-js/enc-base64");
 
-mongoose.connect("mongodb://localhost:27017/picture-uploader");
+mongoose.connect(MONGODB_URI);
 const User = require("./models/User");
 
 const app = express();
 app.use(express.json());
 
-const isAuthenticated = require("MONGODB_URI");
+const isAuthenticated = require("./middlewares/isAuthenticated");
 
 // Routes du compte
 app.post("/user/new", async (req, res) => {
