@@ -54,7 +54,7 @@ app.all("*", (req, res) => {
   try {
     return res
       .status(404)
-      .json("Tous ceux qui errent ne sont pas forcément perdus");
+      .json("Tous ceux qui errent ne sont pas forcément perdus (mais presque");
   } catch (error) {
     console.log(error.message);
   }
