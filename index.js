@@ -60,7 +60,6 @@ app.all("*", (req, res) => {
   }
 });
 
-const PORT = PORT;
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server Online : let the show begin baby !");
 });
