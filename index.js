@@ -5,7 +5,7 @@ const uid2 = require("uid2");
 const sha256 = require("crypto-js/sha256");
 const Base64 = require("crypto-js/enc-base64");
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 const User = require("./models/User");
 
 const app = express();
