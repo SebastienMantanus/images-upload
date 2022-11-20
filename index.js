@@ -38,7 +38,7 @@ app.post("/user/new", async (req, res) => {
     } else {
       res
         .status(201)
-        .json(`L'utilisateur ${req.body.name} est déjà enregistré !`);
+        .json(`L'utilisateur ${req.body.name} est déjà enregistré banane !`);
     }
   } catch (error) {
     console.log(error.message);
@@ -50,11 +50,12 @@ const picturesRoutes = require("./routes/pictures");
 app.use(picturesRoutes);
 
 // catch All
+
 app.all("*", (req, res) => {
   try {
     return res
       .status(404)
-      .json("Tous ceux qui errent ne sont pas forcément perdus (mais presque");
+      .json("Tous ceux qui errent ne sont pas forcément perdus (mais presque)");
   } catch (error) {
     console.log(error.message);
   }
